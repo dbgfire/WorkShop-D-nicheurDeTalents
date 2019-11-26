@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* Generate page
+docker-compose run web rails g controller index
+
+* Generate react components
+docker-compose run web rails g react:component HelloWorld greeting:string
