@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 
 * Generate page
-docker-compose run web rails g controller index
+dc run web rails g controller static_pages home 
 
 * Generate react components
 docker-compose run web rails g react:component HelloWorld greeting:string
