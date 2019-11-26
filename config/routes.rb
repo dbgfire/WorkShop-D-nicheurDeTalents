@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
   get 'all_tap/index'
-=======
   get 'index/index'
->>>>>>> master
   get 'admin/index'
   get 'static_pages/home'
   root 'index#index'
