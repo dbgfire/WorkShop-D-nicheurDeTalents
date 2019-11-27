@@ -1,0 +1,37 @@
+
+<p>
+  <strong>libelle metier:</strong>
+  <%= @stat.libelle_metier %>
+</p>
+ 
+<p>
+  <strong>description:</strong>
+  <%= @stat.description %>
+</p>
+<p>
+  <strong>patience:</strong>
+  <%= @stat.patience %>
+</p>
+<p>
+  <strong>precision:</strong>
+  <%= @stat.precision %>
+</p>
+<p>
+  <strong>volonte:</strong>
+  <%= @stat.volonte %>
+</p>
+<p>
+  <strong>solitaire:</strong>
+  <%= @stat.solitaire %>
+</p>
+<p>
+  <strong>ordonne:</strong>
+  <%= @stat.ordonne %>
+</p>
+<p>
+  <strong>logique:</strong>
+  <%= @stat.logique %>
+</p>
+
+<%= link_to 'Edit', edit_stat_path(@stat) %> 
+<%= link_to 'Back', stats_path %>

@@ -1,0 +1,41 @@
+
+<h1>New stats</h1>
+<%= form_with scope: :stats,url: stats_path, local: true do |form| %>
+ <p>
+  <p>
+    <%= form.label :libelle_metier %><br>
+    <%= form.text_field :libelle_metier %>
+  </p>
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+   <p>
+    <%= form.label :patience %><br>
+    <%= form.number_field :patience %>
+  </p>
+    <p>
+    <%= form.label :precision %><br>
+    <%= form.number_field :precision %>
+  </p>
+  <p>
+    <%= form.label :volonte %><br>
+    <%= form.number_field :volonte %>
+  </p>
+  <p>
+    <%= form.label :solitaire %><br>
+    <%= form.number_field :solitaire %>
+  </p>
+  <p>
+    <%= form.label :ordonne %><br>
+    <%= form.number_field :ordonne %>
+  </p>
+  <p>
+    <%= form.label :logique %><br>
+    <%= form.number_field :logique %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', stats_path %>
