@@ -42,7 +42,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <input  id="bt_Start_laby" type="button" onclick="Jeu.init()" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" style=" text-align: center;position: absolute; right: 48%;" value='Start' />
     <div id='div__afStart_LABYRINTHE' style="display: none;">
       <div class="controle">
-        <input class="w3-button w3-black w3-padding-large w3-large w3-margin-top" style=" text-align: center;right: 48%;" id="StopButton" type="button" value="Passer"/>
+        <input style=" width: 100px; margin-left: auto; margin-right: auto;" class="w3-button w3-grey w3-padding-large w3-large w3-margin-top" id="StopButton_lab" type="button" value="Passer"/>
       </div>
       <div id="jeu"></div>
       <div class="controle">
@@ -54,10 +54,128 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 <!-- ------------------- -->
 
+  <!-- Q1 -->
+  <div id='div_Q1' style="display: none;">
+    <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
+      <h1 class="w3-margin w3-jumbo">Question</h1>
+      <p class="w3-xlarge">Si on vous propose une partie de babyfoot, vous préférez joué en</p>
+      <p class="w3-xlarge">2 contre 2</p>
+      <p class="w3-xlarge">ou</p>
+      <p class="w3-xlarge">1 contre 1</p>
+    </div>
+    <div class="w3-container w3-white w3-center" style="padding:128px 16px">
+      <table style=" width: 100px; margin-left: auto; margin-right: auto;">
+        <tr>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q1_R1" type="button" value="2 contre 2"/>
+          </td>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q1_R2" type="button" value="1 contre 1"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<!-- ------------------- -->
+  <!-- Q2 -->
+  <div id='div_Q2' style="display: none;">
+    <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
+      <h1 class="w3-margin w3-jumbo">Question</h1>
+    </div>
+    <div class="w3-container w3-white w3-center" style="padding:128px 16px">
+      <table style=" width: 100px; margin-left: auto; margin-right: auto;">
+        <tr>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q2_R1" type="button" value="oui"/>
+          </td>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q2_R2" type="button" value="non"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<!-- ------------------- -->
+  <!-- Q3 -->
+  <div id='div_Q3' style="display: none;">
+    <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
+      <h1 class="w3-margin w3-jumbo">Question</h1>
+    </div>
+    <div class="w3-container w3-white w3-center" style="padding:128px 16px">
+      <table style=" width: 100px; margin-left: auto; margin-right: auto;">
+        <tr>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q3_R1" type="button" value="oui"/>
+          </td>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q3_R2" type="button" value="non"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<!-- ------------------- -->
+  <!-- Q4 -->
+  <div id='div_Q4' style="display: none;">
+    <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
+      <h1 class="w3-margin w3-jumbo">Question</h1>
+    </div>
+    <div class="w3-container w3-white w3-center" style="padding:128px 16px">
+      <table style=" width: 100px; margin-left: auto; margin-right: auto;">
+        <tr>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q4_R1" type="button" value="oui"/>
+          </td>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q4_R2" type="button" value="non"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<!-- ------------------- -->
+  <!-- Q5 -->
+  <div id='div_Q4' style="display: none;">
+    <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
+      <h1 class="w3-margin w3-jumbo">Question</h1>
+    </div>
+    <div class="w3-container w3-white w3-center" style="padding:128px 16px">
+      <table style=" width: 100px; margin-left: auto; margin-right: auto;">
+        <tr>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q5_R1" type="button" value="oui"/>
+          </td>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q5_R2" type="button" value="non"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<!-- ------------------- -->
+  <!-- Q6 -->
+  <div id='div_Q4' style="display: none;">
+    <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
+      <h1 class="w3-margin w3-jumbo">Question</h1>
+    </div>
+    <div class="w3-container w3-white w3-center" style="padding:128px 16px">
+      <table style=" width: 100px; margin-left: auto; margin-right: auto;">
+        <tr>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q6_R1" type="button" value="oui"/>
+          </td>
+          <td>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q6_R2" type="button" value="non"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<!-- ------------------- -->
     <script>  
       var PATIENCE = 0;
       var VOLONTE = 0;
-      var PRECITION = 0;
+      var PRECISION = 0;
       var SOLITAIRE = 0;
       var ORDONNE = 0;
       var LOGIQUE = 0;
@@ -66,12 +184,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       var NumGame = 0;
     //NumGame: 0 -> No game
     //NumGame: 1 -> CasseBrick
-    //NumGame: 2 -> div_labyrinthe
+    //NumGame: 2 -> labyrinthe
+    //NumGame: 3 -> Question 1
+    //NumGame: 4 -> Question 2
+    //NumGame: 5 -> Question 3
+    //NumGame: 6 -> Question 4
 
     $("#StopButton").click(function () {
       passe();
     });
-
+    $("#StopButton_lab").click(function () {
+      passe();
+    });
     function nextGame()
     {
       if(NumGame==1)
@@ -83,19 +207,159 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         
       }else if(NumGame==2)
       {
-
+        Jeu.fondDeCouleur("blanc");
+        document.getElementById("div_labyrinthe").style.display = "none";
+        document.getElementById("div_Q1").style.display = "block";
+        NumGame=3;
+        
+      }else if(NumGame==3)
+      {
+        document.getElementById("div_Q1").style.display = "none";
+        document.getElementById("div_Q2").style.display = "block";
+        NumGame=4;
+        
+      }else if(NumGame==4)
+      {
+        document.getElementById("div_Q2").style.display = "none";
+        document.getElementById("div_Q3").style.display = "block";
+        NumGame=5;
+        
+      }else if(NumGame==5)
+      {
+        document.getElementById("div_Q3").style.display = "none";
+        document.getElementById("div_Q4").style.display = "block";
+        NumGame=6;
+        
+      }else if(NumGame==6)
+      {
+        document.getElementById("div_Q5").style.display = "none";
+        document.getElementById("div_Q6").style.display = "block";
       }
 
     }
 
+    $("#Q1_R1").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 0;
+        PRECISION += 1;
+        SOLITAIRE += 3;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
+
+    $("#Q1_R2").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 2;
+        PRECISION += 1;
+        SOLITAIRE -= 3;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
+    $("#Q2_R1").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 0;
+        PRECISION += 0;
+        SOLITAIRE += 0;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
+
+    $("#Q2_R2").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 0;
+        PRECISION += 0;
+        SOLITAIRE += 0;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
+    $("#Q3_R1").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 0;
+        PRECISION += 0;
+        SOLITAIRE += 0;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
+
+    $("#Q3_R2").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 0;
+        PRECISION += 0;
+        SOLITAIRE += 0;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
+    $("#Q4_R1").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 0;
+        PRECISION += 0;
+        SOLITAIRE += 0;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
+
+    $("#Q4_R2").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 0;
+        PRECISION += 0;
+        SOLITAIRE += 0;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
+    $("#Q5_R1").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 0;
+        PRECISION += 0;
+        SOLITAIRE += 0;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
+
+    $("#Q5_R2").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 0;
+        PRECISION += 0;
+        SOLITAIRE += 0;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
+    $("#Q6_R1").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 0;
+        PRECISION += 0;
+        SOLITAIRE += 0;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
+
+    $("#Q6_R2").click(function () {
+        PATIENCE += 0;
+        VOLONTE += 0;
+        PRECISION += 0;
+        SOLITAIRE += 0;
+        ORDONNE += 0;
+        LOGIQUE += 0;
+        nextGame()
+    });
     function passe()
     {
       if(NumGame==1)
       {
         started_CasseBrick = false;
-        PATIANCE -= 5;
+        PATIENCE -= 5;
         VOLONTE -= 3;
-        PRECITION -= 3;
+        PRECISION -= 3;
         SOLITAIRE -= 0;
         ORDONNE -= 0;
         LOGIQUE -= 1;
@@ -104,7 +368,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         
       }else if(NumGame==2)
       {
+        PATIENCE -= 5;
+        VOLONTE -= 3;
+        PRECISION -= 0;
+        SOLITAIRE -= 0;
+        ORDONNE -= 0;
+        LOGIQUE -= 5;
 
+        nextGame()
       }
 
     }
@@ -184,9 +455,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                 score++;
                 if(score == brickRowCount*brickColumnCount) {
 
-                  PATIANCE += 5;
+                  PATIENCE += 5;
                   VOLONTE += 3;
-                  PRECITION += 3;
+                  PRECISION += 3;
                   SOLITAIRE += 0;
                   ORDONNE += 0;
                   LOGIQUE += 0;
@@ -263,9 +534,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             lives--;
             if(!lives) {
 
-              PATIANCE += 2;
+              PATIENCE += 2;
               VOLONTE += 1;
-              PRECITION += 1;
+              PRECISION += 1;
               SOLITAIRE += 0;
               ORDONNE += 0;
               LOGIQUE += 0;
@@ -589,6 +860,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   
   //============= Zone.allerVersSortie =============
   Zone.prototype.allerVersSortie = function () {
+        PATIENCE -= 5;
+        VOLONTE -= 3;
+        PRECISION -= 3;
+        SOLITAIRE -= 0;
+        ORDONNE -= 0;
+        LOGIQUE -= 1;
     var kz = this.grille[this.liICI][this.coICI];
     var d = kz.direction;
     if (kz.murVers((d + 3) % 4)) {
@@ -795,6 +1072,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   //================== Jeu.finDePartie ==================
   Jeu.finDePartie = function () {
     Jeu.fondDeCouleur("vert");
+
+    PATIENCE += 5;
+    VOLONTE += 3;
+    PRECISION += 0;
+    SOLITAIRE += 0;
+    ORDONNE += 0;
+    LOGIQUE += 5;
+    nextGame();
   };
   
   //================== Jeu.avancerVersSortie ==================
