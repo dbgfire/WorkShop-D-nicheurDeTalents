@@ -1,0 +1,90 @@
+/* Global */
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  font-family: helvetica, sans-serif;
+  background-color: #ddd; }
+
+.container {
+  width: 768px;
+  margin: 0 auto; }
+
+/* header */
+#bandeau {
+  font-size: 1em;
+  color: #fff;
+  background: #000;
+  padding: 20px 0;
+  text-align: center; }
+  #bandeau h1 {
+    margin: 0;
+    padding: 30px 0;
+    text-transform: uppercase; }
+
+.playBoard {
+  background-color: #629f1b;
+  color: #fff;
+  position: relative; }
+  .playBoard #score {
+    display: none;
+    padding: 10px 0 10px 10px;
+    text-align: left; }
+  .playBoard #countdown {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    padding: 10px 10px 10px 10px; }
+
+/* Boutons Lancement jeu et Rejouer */
+#start,
+#newGame {
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 200px);
+  width: 400px;
+  background-color: #629f1b;
+  border-radius: 5px;
+  padding: 1em 0;
+  cursor: pointer; }
+
+#newGame a {
+  color: #fff;
+  text-decoration: none; }
+
+/* Contenu du jeu */
+#zoneJeu {
+  width: 760px;
+  height: 400px;
+  margin: 40px auto;
+  position: relative;
+  top: 0;
+  background-color: #fff; }
+
+.letter {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font: bold 14px verdana;
+  background-color: #629f1b;
+  text-align: center;
+  line-height: 26px;
+  border-radius: 100%; }
+
+/* Footer */
+#infos {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px 0; }
+  #infos p {
+    font-size: 0.8em;
+    color: #ddd; }
+    #infos p a {
+      color: blueviolet;
+      text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */

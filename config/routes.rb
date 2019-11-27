@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'all_tap/index'
   get 'index/index'
   get 'admin/index'
   get 'static_pages/home'
