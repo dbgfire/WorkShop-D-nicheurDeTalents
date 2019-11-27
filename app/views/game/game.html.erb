@@ -46,9 +46,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       </div>
       <div id="jeu"></div>
       <div class="controle">
-        <img src="plus.png" onclick="Jeu.clicPlus()" alt="" />
-        <img src="avancer.png" onclick="Jeu.clicAvancer()" alt="" />
-        <img src="moins.png" onclick="Jeu.clicMoins()" alt="" /> 
+        <img src="/images/plus.png" onclick="Jeu.clicPlus()" alt="" />
+        <img src="/images/avancer.png" onclick="Jeu.clicAvancer()" alt="" />
+        <img src="/images/moins.png" onclick="Jeu.clicMoins()" alt="" /> 
       </div>
     </div>
   </div>
@@ -57,7 +57,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <!-- Q1 -->
   <div id='div_Q1' style="display: none;">
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
-      <h1 class="w3-margin w3-jumbo">Question</h1>
+      <h1 class="w3-margin w3-jumbo">Question 1</h1>
       <p class="w3-xlarge">Si on vous propose une partie de babyfoot, vous préférez joué en</p>
       <p class="w3-xlarge">2 contre 2</p>
       <p class="w3-xlarge">ou</p>
@@ -80,7 +80,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <!-- Q2 -->
   <div id='div_Q2' style="display: none;">
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
-      <h1 class="w3-margin w3-jumbo">Question</h1>
+      <h1 class="w3-margin w3-jumbo">Question 2</h1>
     </div>
     <div class="w3-container w3-white w3-center" style="padding:128px 16px">
       <table style=" width: 100px; margin-left: auto; margin-right: auto;">
@@ -99,7 +99,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <!-- Q3 -->
   <div id='div_Q3' style="display: none;">
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
-      <h1 class="w3-margin w3-jumbo">Question</h1>
+      <h1 class="w3-margin w3-jumbo">Question 3</h1>
     </div>
     <div class="w3-container w3-white w3-center" style="padding:128px 16px">
       <table style=" width: 100px; margin-left: auto; margin-right: auto;">
@@ -118,7 +118,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <!-- Q4 -->
   <div id='div_Q4' style="display: none;">
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
-      <h1 class="w3-margin w3-jumbo">Question</h1>
+      <h1 class="w3-margin w3-jumbo">Question 4</h1>
     </div>
     <div class="w3-container w3-white w3-center" style="padding:128px 16px">
       <table style=" width: 100px; margin-left: auto; margin-right: auto;">
@@ -135,9 +135,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 <!-- ------------------- -->
   <!-- Q5 -->
-  <div id='div_Q4' style="display: none;">
+  <div id='div_Q5' style="display: none;">
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
-      <h1 class="w3-margin w3-jumbo">Question</h1>
+      <h1 class="w3-margin w3-jumbo">Question 5</h1>
     </div>
     <div class="w3-container w3-white w3-center" style="padding:128px 16px">
       <table style=" width: 100px; margin-left: auto; margin-right: auto;">
@@ -154,9 +154,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 <!-- ------------------- -->
   <!-- Q6 -->
-  <div id='div_Q4' style="display: none;">
+  <div id='div_Q6' style="display: none;">
+
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
-      <h1 class="w3-margin w3-jumbo">Question</h1>
+      <h1 class="w3-margin w3-jumbo">Question 6</h1>
     </div>
     <div class="w3-container w3-white w3-center" style="padding:128px 16px">
       <table style=" width: 100px; margin-left: auto; margin-right: auto;">
@@ -172,6 +173,30 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
   </div>
 <!-- ------------------- -->
+
+<div id='finalUserPage' style="display: none;" class="container class_contact" >  
+  <form id="contact" action="" method="post">
+    <h3 style="display: block;font-size: 30px;font-weight: 300;margin-bottom: 10px; ">Vos informations personnelles</h3>
+    <h4 style="margin: 5px 0 15px;display: block;font-size: 13px;font-weight: 400;">Remplissez les champs ci-dessous pour recevoir des offres en accord avec vos compétences</h4>
+    <fieldset class="class_fieldset">
+      <input class="class_input" placeholder="Votre Nom" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset class="class_fieldset">
+      <input class="class_input" placeholder="Votre Prénom" type="text" tabindex="1" required>
+    </fieldset>
+    <fieldset class="class_fieldset">
+      <input class="class_input" placeholder="Votre Adresse E-mail" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset class="class_fieldset">
+      <input class="class_input" placeholder="Votre numéro de téléphone" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset class="class_fieldset">
+      <button class="class_button" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>
+    </fieldset>
+  </form>
+</div>
+
+
     <script>  
       var PATIENCE = 0;
       var VOLONTE = 0;
@@ -179,6 +204,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       var SOLITAIRE = 0;
       var ORDONNE = 0;
       var LOGIQUE = 0;
+      
 
 
       var NumGame = 0;
@@ -232,8 +258,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         
       }else if(NumGame==6)
       {
+        document.getElementById("div_Q4").style.display = "none";
+        document.getElementById("div_Q5").style.display = "block";
+        NumGame=7;
+        
+      }else if(NumGame==7)
+      {
         document.getElementById("div_Q5").style.display = "none";
         document.getElementById("div_Q6").style.display = "block";
+        NumGame=8;
+      }else if(NumGame==8)
+      {
+        document.getElementById("div_Q6").style.display = "none";
+        document.getElementsByTagName("body")[0].style = '  font-family: "Roboto", Helvetica, Arial, sans-serif;font-weight: 100;font-size: 12px;line-height: 30px;color: #777;background: #4CAF50;';
+        document.getElementById("finalUserPage").style.display = "block";
       }
 
     }
@@ -388,7 +426,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         $("#myCanvas_CasseBrike").show();
         $("#StartButton").hide();
         started_CasseBrick = true;
-        draw_CasseBrik()
+        draw_CasseBrik();
     });
     var canvas = document.getElementById("myCanvas_CasseBrike");
     var ctx = canvas.getContext("2d");
@@ -1179,14 +1217,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   .entree { background-color: #F99; }
   .sortie { background-color: #9F9; }
   
-  fieldset {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    border: 1px maroon solid;
-    padding: 5px;
-    background-color: white;
-  }
   
   legend {
     border: 1px maroon solid;
@@ -1203,6 +1233,46 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   
   .vert { background-color: #0F0; }
   .rouge { background-color: #F00; }
+  
+  </style>
+
+<style>
+  .container {
+    max-width: 40%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .class_fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
+  .class_input {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+  }
+  .class_contact {
+    background: #F9F9F9;
+    padding: 25px;
+   /* margin: 150px 0;*/
+    box-shadow: 0 0 200px 0 rgba(0, 0, 0, 0.2), 0 50px 50px 0 rgba(0, 0, 0, 0.24);
+  }
+  .class_button {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+  }
   
   </style>
 </body>
