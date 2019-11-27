@@ -1,0 +1,2 @@
+class FinalPageController < ApplicationController
+end

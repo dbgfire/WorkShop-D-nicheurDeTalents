@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'index/index'
   get 'admin/index'
   get 'static_pages/home'
+  get 'final_page/final_page'
+  get 'game/game'
   root 'index#index'
 
   resources :users
