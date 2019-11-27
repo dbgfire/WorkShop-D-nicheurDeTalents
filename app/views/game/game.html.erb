@@ -16,23 +16,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <head>
     <meta charset="utf-8" />
     <title>Salle d&apos;attente</title>
-    <style>canvas { background: url('./image/noel.jpg'); display: block; margin: 0 auto; }</style>
+    <style>canvas { display: block; margin: 0 auto; }</style>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
-  <!-- Casse brique -->
+  <!-- Casse brique style="display: none;" -->
+  <div id='div_caseBrike'>
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
         <h1 class="w3-margin w3-jumbo">Casse-briques</h1>
         <p class="w3-xlarge">Bienvenu dans Casse-briques! Le but est simple, casse les brisques et fait le meilleur score ! Fait gaffe de ne pas laisser la balle s échappez.</p>
         <p class="w3-xlarge">Utilise les flèche du clavier pour bouger ou maintient la souris.</p>
         <input class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="StartButton" type="button" value="Start"/>
+        <input style="display: none; width: 100px; margin-left: auto; margin-right: auto;" class="w3-button w3-padding-large w3-large w3-margin-top" id="StopButton" type="button" value="Passé"/>
     </div>
-    <style>canvas { background: url('./image/noel.jpg'); display: block; margin: 0 auto; }</style>
-    <canvas id="myCanvas"  width="480" height="320"></canvas>
+    <style>canvas { display: block; margin: 0 auto; }</style>
+    <canvas style="display: none;" id="myCanvas_CasseBrike"  width="480" height="320"></canvas>
+  </div>
     <!-- ------------------- -->
 
 
-    <script>
+    <script>  
       var PATIANCE = 0;
       var VOLONTE = 0;
       var PRECITION = 0;
@@ -40,15 +43,61 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       var ORDONNE = 0;
       var LOGIQUE = 0;
 
+
+      var NumGame = 0;
+    //NumGame: 0 -> No game
+    //NumGame: 1 -> CasseBrick
+    //NumGame: 2 -> 
+
+    $("#StopButton").click(function () {
+      passe();
+    });
+
+    function nextGame()
+    {
+      if(NumGame==1)
+      {
+        document.getElementById("div_caseBrike").style.display = "none";
+        
+      }else if(NumGame==2)
+      {
+
+      }
+
+    }
+
+    function passe()
+    {
+      if(NumGame==1)
+      {
+        started_CasseBrick = false;
+        PATIANCE -= 5;
+        VOLONTE -= 3;
+        PRECITION -= 3;
+        SOLITAIRE -= 0;
+        ORDONNE -= 0;
+        LOGIQUE -= 1;
+
+        nextGame()
+        
+      }else if(NumGame==2)
+      {
+
+      }
+
+    }
 //Casse brique-------------------------------------------------------------------
     var started_CasseBrick = false;
     $("#StartButton").click(function () {
+      NumGame=1;
+      document.getElementById("StopButton").style.display = "block";
         $("#SplashScreen").hide();
-        $("#myCanvas").show();
+        $("#myCanvas_CasseBrike").show();
+        $("#StartButton").hide();
         started_CasseBrick = true;
-        draw()
+        draw_CasseBrik()
     });
-    var canvas = document.getElementById("myCanvas");
+    var canvas = document.getElementById("myCanvas_CasseBrike");
     var ctx = canvas.getContext("2d");
     var ballRadius = 10;
     var x = canvas.width/2;
@@ -119,9 +168,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                   SOLITAIRE += 0;
                   ORDONNE += 0;
                   LOGIQUE += 0;
-
-                  alert("Tu gagne ! Félicitation !")
-                  document.location.reload();
+                  nextGame()
                 }
               }
             }
@@ -171,7 +218,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         ctx.fillText("Lives: "+lives, canvas.width-65, 20);
       }
 
-      function draw() {
+      function draw_CasseBrik() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawBricks();
         drawBall();
@@ -200,8 +247,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
               SOLITAIRE += 0;
               ORDONNE += 0;
               LOGIQUE += 0;
-              alert("GAME OVER");
-              document.location.reload();
+              nextGame()
             }
             else {
               x = canvas.width/2;
@@ -222,7 +268,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
         x += dx;
         y += dy;
-        requestAnimationFrame(draw);
+        if(started_CasseBrick)
+          requestAnimationFrame(draw_CasseBrik);
       }
 //Casse brique-------------------------------------------------------------------
     </script>
