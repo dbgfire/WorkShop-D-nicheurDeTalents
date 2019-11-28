@@ -15,6 +15,7 @@
     <td><%= user.lastname %> </td>
     <td><%= user.phone %></td>
     <td><%= user.mail %></td>
+    <td><%= user.metier %></td>
     <td>
     <div>
         <canvas id=<%= user.id%> width="300" height="300"></canvas>
@@ -60,7 +61,6 @@
     </script>
     </div>
     </td>
-    <td><%= link_to 'Show', user_path(user) %></td>
     </tr>
 <% end %>
 </table>
