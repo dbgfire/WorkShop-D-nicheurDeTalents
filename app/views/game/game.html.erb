@@ -197,8 +197,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 <!-- ------------------- -->
 
-<div id='finalUserPage' style="display: none;" class="container class_contact" >  
-  <form id="contact" action="" method="post">
+<div id='finalUserPage' style="display: none;" class="container class_contact">  
+  <%# <form id="contact" action="" method="post">
     <h3 style="display: block;font-size: 30px;font-weight: 300;margin-bottom: 10px; ">Vos informations personnelles</h3>
     <h4 style="margin: 5px 0 15px;display: block;font-size: 13px;font-weight: 400;">Remplissez les champs ci-dessous pour recevoir des offres en accord avec vos compétences</h4>
     <fieldset class="class_fieldset">
@@ -216,7 +216,57 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <fieldset class="class_fieldset">
       <button class="class_button" type="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>
     </fieldset>
-  </form>
+  </form> %>
+  <%= form_with scope: :users,url: users_path, local: true do |form| %>
+  <fieldset class="class_fieldset">
+    <%= form.label :firstname %><br>
+    <%= form.text_field :firstname %>
+  </fieldset>
+  <fieldset class="class_fieldset">
+    <%= form.label :lastname %><br>
+    <%= form.text_field :lastname %>
+  </fieldset>
+   <fieldset class="class_fieldset">
+    <%= form.label :mail %><br>
+    <%= form.text_field :mail %>
+  </fieldset>
+  <fieldset class="class_fieldset">
+    <%= form.label :phone %><br>
+    <%= form.text_field :phone %>
+  </fieldset>
+  <fieldset class="class_fieldset">
+    <%= form.label :metier %><br>
+    <%= form.text_field :metier %>
+  </fieldset>
+ <fieldset class="class_fieldset">
+    <%= form.label :patience %><br>
+    <%= form.number_field :patience %>
+  </fieldset>
+    <fieldset class="class_fieldset">
+    <%= form.label :precision %><br>
+    <%= form.number_field :precision %>
+  </fieldset>
+  <fieldset class="class_fieldset">
+    <%= form.label :volonte %><br>
+    <%= form.number_field :volonte %>
+  </fieldset>
+  <fieldset class="class_fieldset">
+    <%= form.label :solitaire %><br>
+    <%= form.number_field :solitaire %>
+  </fieldset>
+  <fieldset class="class_fieldset">
+    <%= form.label :ordonne %><br>
+    <%= form.number_field :ordonne %>
+  </fieldset>
+  <fieldset class="class_fieldset">
+    <%= form.label :logique %><br>
+    <%= form.number_field :logique %>
+  </fieldset>
+ 
+    <fieldset class="class_fieldset">
+      <button class="class_button" type="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>
+    </fieldset>
+<% end %>
 </div>
    
 
@@ -1300,5 +1350,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   }
   
   </style>
+
 </body>
 </html>
