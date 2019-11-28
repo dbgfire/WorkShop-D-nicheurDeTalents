@@ -1,91 +1,66 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <h1>Candidats</h1>
-<div  style="width:20%">
-    <canvas id="1" width="300" height="300"></canvas>
-</div>
-<div  style="width:20%">
-    <canvas id="2" width="300" height="300"></canvas>
-</div>
-<style>
-#myChart{
-    width:20%;
-    height:20%;
-}
-</style>
-<script>
-var ctx = document.getElementById('1').getContext('2d');
-var ctx2 = document.getElementById('2').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'radar',
-    data: {
-        labels: ['PATIENCE', 'VOLONTE', 'PRECITION', 'SOLITAIRE', 'ORDONNE', 'LOGIQUE'],
-        datasets: [{
-            label: 'score',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
+<table>
+  <tr>
+    <th>Prénom</th>
+    <th>Nom</th>
+    <th>Numéro de téléphone</th>
+    <th>Adresse mail</th>
+    <th>Compétence</th>
+    <th></th>
+  </tr>
+    <% User.all.each do |user| %>
+    <tr>
+    <td><%= user.firstname %></td>
+    <td><%= user.lastname %> </td>
+    <td><%= user.phone %></td>
+    <td><%= user.mail %></td>
+    <td>
+    <div>
+        <canvas id=<%= user.id%> width="300" height="300"></canvas>
+            <script>
+        var data_<%= user.id%>=[<%= user.patience %>,<%= user.precision %>,<%= user.solitaire %>,<%= user.volonte %>,<%= user.ordonne %>,<%= user.logique %>]
+        var ctx = document.getElementById(<%= user.id%>).getContext('2d');
+        var myChart_<%= user.id%> = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['PATIENCE', 'VOLONTE', 'PRECITION', 'SOLITAIRE', 'ORDONNE', 'LOGIQUE'],
+                datasets: [{
+                    label: 'score',
+                    data: data_<%= user.id%>,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
                 }
-            }]
-        }
-    }
-});
-var myChart2 = new Chart(ctx2, {
-    type: 'radar',
-    data: {
-        labels: ['PATIENCE', 'VOLONTE', 'PRECITION', 'SOLITAIRE', 'ORDONNE', 'LOGIQUE'],
-        datasets: [{
-            label: 'score',
-            data: [12, 19, 3, 5, 15, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
-
-</script>
+            }
+        });
+    </script>
+    </div>
+    </td>
+    <td><%= link_to 'Show', user_path(user) %></td>
+    </tr>
+<% end %>
+</table>

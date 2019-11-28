@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    protect_from_forgery with: :null_session
     def new
         @user = User.new
     end
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
         # render plain: params[:users].inspect
         @user = User.new(user_params)
         if @user.save
-            redirect_to @user
+            redirect_to '/'
         else
             render 'new'
         end
@@ -38,7 +39,7 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:users).permit(:firstname, :lastname,:mail,:phone)
+        params.require(:users).permit(:firstname, :lastname,:mail,:phone,:patience,:precision,:solitaire,:volonte,:ordonne,:logique)
     end
 
 end
