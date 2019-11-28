@@ -19,6 +19,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <style>canvas { display: block; margin: 0 auto; }</style>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
+<script>
+//Déclaration des variables utilisateur
+      var PATIENCE = 0;
+      var VOLONTE = 0;
+      var PRECISION = 0;
+      var SOLITAIRE = 0;
+      var ORDONNE = 0;
+      var LOGIQUE = 0;
+</script>
 <body>
   <!-- Casse brique -->
   <div id='div_caseBrike'>
@@ -191,19 +200,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <input class="class_input" placeholder="Votre numéro de téléphone" type="tel" tabindex="3" required>
     </fieldset>
     <fieldset class="class_fieldset">
-      <button class="class_button" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>
+      <button class="class_button" type="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>
     </fieldset>
   </form>
+  <canvas id='grap' width="300" height="300"></canvas>
 </div>
+   
+
+
+
 
 
     <script>  
-      var PATIENCE = 0;
-      var VOLONTE = 0;
-      var PRECISION = 0;
-      var SOLITAIRE = 0;
-      var ORDONNE = 0;
-      var LOGIQUE = 0;
+      
       
 
 
@@ -605,6 +614,52 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 //Casse brique-------------------------------------------------------------------
     </script>
 
+
+ 
+            <script>
+                aDataGraph = [PATIENCE,VOLONTE,PRECISION,SOLITAIRE,ORDONNE,LOGIQUE];
+      
+                var ctx = document.getElementById('graph').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['PATIENCE', 'VOLONTE', 'PRECITION', 'SOLITAIRE', 'ORDONNE', 'LOGIQUE'],
+                datasets: [{
+                    label: 'score',
+                    data: aDataGraph,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+  </script>
+
+</script>
 <script>
     /* LABYRINTHE =================================================================================================================================
     ===============================================================================================================================================
@@ -1176,7 +1231,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     Jeu.dom_body = document.getElementsByTagName('body')[0];
     // zone d'affichage de l'aide (bouton aide au départ)
     Jeu.dom_btnAide = document.getElementById("btnAide");
-    // zone d'affichage des informations (* au départ)
+    // zone d''affichage des informations (* au départ)
     Jeu.dom_aide = document.getElementById("aide");
     // zone de définition du jeu (vide au départ)
     Jeu.dom_jeu = document.getElementById("jeu");
@@ -1185,6 +1240,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   };
   
   </script>
+    
   <style>
   
   #jeu {
