@@ -1,0 +1,41 @@
+
+<h1>Listing stat</h1>
+ 
+<%= link_to 'New stat', new_stat_path %>
+
+<table>
+  <tr>
+    <th>libelle_metier</th>
+    <th>description</th>
+    <th>Phone</th>
+    <th>libelle_metier</th>
+    <th>description</th>
+    <th>patience</th>
+    <th>precision</th>
+    <th>solitaire</th>
+    <th>volonte</th>
+    <th>ordonne</th>
+    <th>logique</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @stats.each do |stat| %>
+    <tr>
+      <td><%= stat.libelle_metier %></td>
+      <td><%= stat.description %></td>
+      <td><%= stat.patience %></td>
+      <td><%= stat.precision %></td>
+      <td><%= stat.solitaire %></td>
+      <td><%= stat.volonte %></td>
+      <td><%= stat.ordonne %></td>
+      <td><%= stat.logique %></td>
+      <td><%= link_to 'Show', stat_path(stat) %></td>
+      <td><%= link_to 'Edit', edit_stat_path(stat) %></td>
+       <td><%= link_to 'Destroy', stat_path(stat),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
