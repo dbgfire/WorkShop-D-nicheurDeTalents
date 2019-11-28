@@ -55,9 +55,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       </div>
       <div id="jeu"></div>
       <div class="controle">
-        <img src="/images/plus.png" onclick="Jeu.clicPlus()" alt="" />
-        <img src="/images/avancer.png" onclick="Jeu.clicAvancer()" alt="" />
-        <img src="/images/moins.png" onclick="Jeu.clicMoins()" alt="" /> 
+        <img src="plus.png" onclick="Jeu.clicPlus()" alt="" />
+        <img src="avancer.png" onclick="Jeu.clicAvancer()" alt="" />
+        <img src="moins.png" onclick="Jeu.clicMoins()" alt="" /> 
       </div>
     </div>
   </div>
@@ -67,7 +67,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div id='div_Q1' style="display: none;">
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
       <h1 class="w3-margin w3-jumbo">Question 1</h1>
-      <p class="w3-xlarge">Si on vous propose une partie de babyfoot, vous préférez joué en</p>
+      <p class="w3-xlarge">Si on vous propose une partie de babyfoot, vous préférez jouer en</p>
       <p class="w3-xlarge">2 contre 2</p>
       <p class="w3-xlarge">ou</p>
       <p class="w3-xlarge">1 contre 1</p>
@@ -90,15 +90,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div id='div_Q2' style="display: none;">
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
       <h1 class="w3-margin w3-jumbo">Question 2</h1>
+      <p class="w3-xlarge">Vous entrez sur le périphérique</p>
+      <p class="w3-xlarge">Vous allez sortir à 300m, mais une voiture roule lentement devant vous</p>
+      <p class="w3-xlarge">A: Vous restez sur votre voie</p>
+      <p class="w3-xlarge">B: Vous doublez la voiture</p>
     </div>
     <div class="w3-container w3-white w3-center" style="padding:128px 16px">
       <table style=" width: 100px; margin-left: auto; margin-right: auto;">
         <tr>
           <td>
-            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q2_R1" type="button" value="oui"/>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q2_R1" type="button" value="A"/>
           </td>
           <td>
-            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q2_R2" type="button" value="non"/>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q2_R2" type="button" value="B"/>
           </td>
         </tr>
       </table>
@@ -109,15 +113,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div id='div_Q3' style="display: none;">
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
       <h1 class="w3-margin w3-jumbo">Question 3</h1>
+      <p class="w3-xlarge">Préférez-vous commander ou cuisiner</p>
+      <p class="w3-xlarge">après une dure journée de travail ?</p>
     </div>
     <div class="w3-container w3-white w3-center" style="padding:128px 16px">
       <table style=" width: 100px; margin-left: auto; margin-right: auto;">
         <tr>
           <td>
-            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q3_R1" type="button" value="oui"/>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q3_R1" type="button" value="commander"/>
           </td>
           <td>
-            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q3_R2" type="button" value="non"/>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q3_R2" type="button" value="cuisiner"/>
           </td>
         </tr>
       </table>
@@ -128,15 +134,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div id='div_Q4' style="display: none;">
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
       <h1 class="w3-margin w3-jumbo">Question 4</h1>
+      <p class="w3-xlarge">Vous préférez rendre</p>
+      <p class="w3-xlarge">A: un travail à l'heure mais à peine fonctionnel</p>
+      <p class="w3-xlarge">B: un travail en retard mais correct</p>
     </div>
     <div class="w3-container w3-white w3-center" style="padding:128px 16px">
       <table style=" width: 100px; margin-left: auto; margin-right: auto;">
         <tr>
           <td>
-            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q4_R1" type="button" value="oui"/>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q4_R1" type="button" value="A"/>
           </td>
           <td>
-            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q4_R2" type="button" value="non"/>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q4_R2" type="button" value="B"/>
           </td>
         </tr>
       </table>
@@ -147,6 +156,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div id='div_Q5' style="display: none;">
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
       <h1 class="w3-margin w3-jumbo">Question 5</h1>
+      <p class="w3-xlarge">Avant de partir en vacances</p>
+      <p class="w3-xlarge">Faites-vous une liste pour préparer votre valise ?</p>
     </div>
     <div class="w3-container w3-white w3-center" style="padding:128px 16px">
       <table style=" width: 100px; margin-left: auto; margin-right: auto;">
@@ -167,15 +178,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
     <div class="w3-container w3-grey w3-center" style="padding:128px 16px">
       <h1 class="w3-margin w3-jumbo">Question 6</h1>
+      <p class="w3-xlarge">Les cériales ...</p>
+      <p class="w3-xlarge">A: Avant le lait</p>
+      <p class="w3-xlarge">B: Après le lait</p>
     </div>
     <div class="w3-container w3-white w3-center" style="padding:128px 16px">
       <table style=" width: 100px; margin-left: auto; margin-right: auto;">
         <tr>
           <td>
-            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q6_R1" type="button" value="oui"/>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q6_R1" type="button" value="A"/>
           </td>
           <td>
-            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q6_R2" type="button" value="non"/>
+            <input style="width: 100%;" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" id="Q6_R2" type="button" value="B"/>
           </td>
         </tr>
       </table>
@@ -203,7 +217,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <button class="class_button" type="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>
     </fieldset>
   </form>
-  <canvas id='grap' width="300" height="300"></canvas>
 </div>
    
 
@@ -305,98 +318,98 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         nextGame()
     });
     $("#Q2_R1").click(function () {
-        PATIENCE += 0;
-        VOLONTE += 0;
+        PATIENCE -= 3;
+        VOLONTE -= 2;
         PRECISION += 0;
         SOLITAIRE += 0;
-        ORDONNE += 0;
-        LOGIQUE += 0;
+        ORDONNE -= 1;
+        LOGIQUE -= 1;
         nextGame()
     });
 
     $("#Q2_R2").click(function () {
-        PATIENCE += 0;
-        VOLONTE += 0;
+        PATIENCE += 3;
+        VOLONTE += 2;
         PRECISION += 0;
         SOLITAIRE += 0;
-        ORDONNE += 0;
-        LOGIQUE += 0;
+        ORDONNE += 1;
+        LOGIQUE += 1;
         nextGame()
     });
     $("#Q3_R1").click(function () {
-        PATIENCE += 0;
-        VOLONTE += 0;
+        PATIENCE -= 3;
+        VOLONTE -= 3;
         PRECISION += 0;
-        SOLITAIRE += 0;
-        ORDONNE += 0;
-        LOGIQUE += 0;
+        SOLITAIRE -= 1;
+        ORDONNE -= 1;
+        LOGIQUE += 2;
         nextGame()
     });
 
     $("#Q3_R2").click(function () {
-        PATIENCE += 0;
-        VOLONTE += 0;
+        PATIENCE += 3;
+        VOLONTE += 3;
         PRECISION += 0;
-        SOLITAIRE += 0;
-        ORDONNE += 0;
-        LOGIQUE += 0;
+        SOLITAIRE += 1;
+        ORDONNE += 1;
+        LOGIQUE -= 2;
         nextGame()
     });
     $("#Q4_R1").click(function () {
         PATIENCE += 0;
-        VOLONTE += 0;
+        VOLONTE -= 1;
         PRECISION += 0;
         SOLITAIRE += 0;
-        ORDONNE += 0;
-        LOGIQUE += 0;
+        ORDONNE += 1;
+        LOGIQUE += 3;
         nextGame()
     });
 
     $("#Q4_R2").click(function () {
-        PATIENCE += 0;
-        VOLONTE += 0;
-        PRECISION += 0;
+        PATIENCE += 1;
+        VOLONTE += 1;
+        PRECISION += 1;
         SOLITAIRE += 0;
-        ORDONNE += 0;
-        LOGIQUE += 0;
+        ORDONNE -= 1;
+        LOGIQUE -= 3;
         nextGame()
     });
     $("#Q5_R1").click(function () {
-        PATIENCE += 0;
-        VOLONTE += 0;
+        PATIENCE += 1;
+        VOLONTE += 3;
         PRECISION += 0;
         SOLITAIRE += 0;
-        ORDONNE += 0;
-        LOGIQUE += 0;
+        ORDONNE += 5;
+        LOGIQUE += 1;
         nextGame()
     });
 
     $("#Q5_R2").click(function () {
-        PATIENCE += 0;
+        PATIENCE -= 1;
         VOLONTE += 0;
-        PRECISION += 0;
+        PRECISION += 1;
         SOLITAIRE += 0;
-        ORDONNE += 0;
-        LOGIQUE += 0;
+        ORDONNE -= 5;
+        LOGIQUE -= 1;
         nextGame()
     });
     $("#Q6_R1").click(function () {
-        PATIENCE += 0;
-        VOLONTE += 0;
-        PRECISION += 0;
-        SOLITAIRE += 0;
-        ORDONNE += 0;
-        LOGIQUE += 0;
+        PATIENCE += 1;
+        VOLONTE += 1;
+        PRECISION += 1;
+        SOLITAIRE += 1;
+        ORDONNE += 1;
+        LOGIQUE += 1;
         nextGame()
     });
 
     $("#Q6_R2").click(function () {
-        PATIENCE += 0;
-        VOLONTE += 0;
-        PRECISION += 0;
-        SOLITAIRE += 0;
-        ORDONNE += 0;
-        LOGIQUE += 0;
+        PATIENCE += 1;
+        VOLONTE += 1;
+        PRECISION += 1;
+        SOLITAIRE += 1;
+        ORDONNE += 1;
+        LOGIQUE += 1;
         nextGame()
     });
     function passe()
@@ -616,50 +629,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 
  
-            <script>
-                aDataGraph = [PATIENCE,VOLONTE,PRECISION,SOLITAIRE,ORDONNE,LOGIQUE];
-      
-                var ctx = document.getElementById('graph').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: ['PATIENCE', 'VOLONTE', 'PRECITION', 'SOLITAIRE', 'ORDONNE', 'LOGIQUE'],
-                datasets: [{
-                    label: 'score',
-                    data: aDataGraph,
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-
-  </script>
-
-</script>
 <script>
     /* LABYRINTHE =================================================================================================================================
     ===============================================================================================================================================
